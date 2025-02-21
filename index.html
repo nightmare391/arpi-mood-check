@@ -10,12 +10,6 @@
             text-align: center;
             margin-top: 50px;
         }
-        #growButton{
-            background-color: green;
-        }
-        #actionButton{
-            background-color: red;
-        }
         #buttonContainer {
             margin-top: 20px;
         }
@@ -42,10 +36,11 @@
             let newSize = parseFloat(currentSize) + 5 + "px";
             growButton.style.fontSize = newSize;
             growButton.style.padding = "" + (parseFloat(currentSize) + 5) + "px";
+            document.getElementById("message").innerText = "ehh ehh";
         });
 
         document.getElementById("growButton").addEventListener("click", function() {
-            document.getElementById("message").innerText = "SAATT CRORE, BILKUL SAHI JAWAABBB";
+            document.getElementById("message").innerText = "SAATTT CRROORREEEE, BILKUL SAHI JAWAAABBB";
         });
     </script>
 </body>
