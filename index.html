@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Resize</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #growButton{
+            background-color: green;
+        }
+        #actionButton{
+            background-color: red;
+        }
+        #buttonContainer {
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>You're the sweetest most beautiful nicest girl ever. Do you agree?</h1>
+    <div id="buttonContainer">
+        <button id="growButton" class="btn">Yes</button>
+        <button id="actionButton" class="btn">No</button>
+    </div>
+    <p id="message"></p>
+    
+    <script>
+        document.getElementById("actionButton").addEventListener("click", function() {
+            let growButton = document.getElementById("growButton");
+            let currentSize = window.getComputedStyle(growButton).fontSize;
+            let newSize = parseFloat(currentSize) + 5 + "px";
+            growButton.style.fontSize = newSize;
+            growButton.style.padding = "" + (parseFloat(currentSize) + 5) + "px";
+        });
+
+        document.getElementById("growButton").addEventListener("click", function() {
+            document.getElementById("message").innerText = "SAATT CRORE, BILKUL SAHI JAWAABBB";
+        });
+    </script>
+</body>
+</html>
